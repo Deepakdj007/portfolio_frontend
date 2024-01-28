@@ -1,0 +1,79 @@
+.info-container {
+  display: flex;
+  align-items: center;
+  height: 550px;
+  position: relative;
+  .info-content {
+    width: 60%;
+    .title {
+      background: linear-gradient(
+        270deg,
+        #13adc7 0%,
+        #6978d1 66.67%,
+        #945dd6 100%
+      );
+      display: flex;
+      flex-direction: column;
+      -webkit-background-clip: text; /* This is for Webkit-based browsers like Chrome and Safari */
+      color: transparent; /* Make the text transparent so that the gradient is visible through it */
+      span {
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 64px;
+      }
+      margin-bottom: 34px;
+    }
+
+    .greeting {
+      color: white;
+    }
+    .name {
+      display: inline-block; /* Ensure the span takes only the necessary width */
+      background: inherit; /* Inherit the gradient from the parent */
+      -webkit-background-clip: text; /* Clip the background to the text */
+      color: transparent; /* Make the text transparent */
+    }
+    .description {
+      color: #929eb0;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+  .picture-container {
+    position: absolute;
+    width: 40%;
+    top: 0;
+    left: 50%;
+    .ellipse {
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .border-only {
+      border: 2px solid #13adc7;
+      width: 500px;
+      height: 500px;
+    }
+
+    .filled {
+      background: linear-gradient(
+        270deg,
+        #13adc7 0%,
+        #6978d1 66.67%,
+        #945dd6 100%
+      );
+    }
+
+    .image {
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      object-fit: cover;
+      top: 10%;
+      left: 10%;
+    }
+  }
+}
