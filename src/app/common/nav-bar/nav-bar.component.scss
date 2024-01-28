@@ -1,0 +1,100 @@
+.nav-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: sticky;
+  z-index: 2;
+  align-items: center;
+  height: 137px;
+
+  h1,
+  a {
+    color: #fff;
+  }
+  .app-name-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    .app-name {
+      font-family: Poppins;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      cursor: pointer;
+    }
+
+    .tooltip-container {
+      position: relative;
+      display: inline-block;
+      top: 50px;
+      left: 90px;
+    }
+
+    .triangle-tip,
+    .content-cylinder {
+      box-shadow: 0px 10px 30px 0px rgba(147, 94, 214, 0.35);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease-in;
+    }
+
+    .triangle-tip {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #945dd6; /* Adjust the color as needed */
+      top: -49px;
+      left: -45px;
+    }
+
+    .content-cylinder {
+      background: #945dd6;
+      color: #fff; /* Adjust the text color as needed */
+      padding: 10px 20px;
+      border-radius: 25px;
+      top: -40px; /* Adjust the distance above the content */
+      white-space: nowrap; /* Prevent content from breaking to the next line */
+      z-index: 1; /* Ensure the tooltip appears above other content */
+    }
+
+    .app-name:hover + .tooltip-container .triangle-tip,
+    .app-name:hover + .tooltip-container .content-cylinder {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .links {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+
+    .link {
+      font-size: 1.2rem;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0%;
+        height: 2px;
+        background: var(--primaryGradient);
+        transition: width 0.35s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
