@@ -3,8 +3,13 @@
   align-items: center;
   height: 550px;
   position: relative;
+  justify-content: space-between;
+  gap: 50px;
   .info-content {
-    width: 60%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     .title {
       background: linear-gradient(
         270deg,
@@ -14,14 +19,13 @@
       );
       display: flex;
       flex-direction: column;
-      -webkit-background-clip: text; /* This is for Webkit-based browsers like Chrome and Safari */
-      color: transparent; /* Make the text transparent so that the gradient is visible through it */
+      -webkit-background-clip: text;
+      color: transparent;
       span {
         font-size: 64px;
         font-weight: 600;
         line-height: 64px;
       }
-      margin-bottom: 34px;
     }
 
     .greeting {
@@ -42,38 +46,134 @@
     }
   }
   .picture-container {
-    position: absolute;
-    width: 40%;
-    top: 0;
-    left: 50%;
-    .ellipse {
-      position: absolute;
+    width: 450px;
+    height: 450px;
+    position: relative;
+    border-radius: 50em;
+    .ellipse-border-only {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+      transition: box-shadow 2s ease-in-out; /* Add transition property */
+      width: 400px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: linear-gradient(#0f1624, #0f1624) padding-box,
+        linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%)
+          border-box;
+      border-radius: 50em;
+      border: 4px solid transparent;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 280px;
+      height: 280px;
       border-radius: 50%;
+      background: url("../../../assets/my-pic.jpg");
+      background-size: cover;
+      transition: transform 1s, filter 1s;
+      filter: grayscale(100%);
+      box-shadow: #13adc7 0px 7px 29px 0px;
+      transition: box-shadow 2s ease-in-out;
+      animation: slowBreatheIn 2s infinite alternate
+        cubic-bezier(0.4, 0.2, 0.6, 1);
     }
 
-    .border-only {
-      border: 2px solid #13adc7;
-      width: 500px;
-      height: 500px;
-    }
-
-    .filled {
+    .download-cv {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: -12%;
+      top: 40%;
+      transform: rotate(-180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       background: linear-gradient(
         270deg,
         #13adc7 0%,
         #6978d1 66.67%,
         #945dd6 100%
       );
+      filter: grayscale(100%);
+      border-radius: 100px;
+      transition: box-shadow 1s ease-in-out, transform 1s ease-in-out; /* Add transition property */
+      img {
+        height: 25px;
+        width: 25px;
+      }
+      h3 {
+        font-size: 14px;
+        color: white;
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
+  }
+  &:hover {
+    .picture-container {
+      .ellipse-border-only {
+        animation: breatheOut 2s infinite alternate
+          cubic-bezier(0.4, 0.2, 0.6, 1);
+      }
 
-    .image {
-      position: absolute;
-      width: 80%;
-      height: 80%;
-      border-radius: 50%;
-      object-fit: cover;
-      top: 10%;
-      left: 10%;
+      .image {
+        /* ... Your existing styles ... */
+        filter: grayscale(0%);
+        box-shadow: #000435 -100px 100px 100em 20em;
+        transition: box-shadow 2s ease-in-out; /* Add transition property */
+
+        animation: breatheIn 2s infinite alternate
+          cubic-bezier(0.4, 0.2, 0.6, 1);
+        transition: transform 1s, filter 1s; /* Add transition property */
+      }
+
+      .download-cv {
+        /* ... Your existing styles ... */
+        filter: grayscale(0%);
+        transition: all 2s cubic-bezier(0.4, 0.2, 0.6, 1);
+        animation: rotateAroundEllipse 2s forwards;
+        box-shadow: #13adc7 0px 7px 29px 0px;
+      }
     }
+  }
+}
+
+//Key Frames
+@keyframes slowBreatheIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+@keyframes breatheIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+@keyframes breatheOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes rotateAroundEllipse {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
