@@ -1,20 +1,28 @@
 <section>
   <div class="info-container">
     <div class="info-content">
-      <h1 class="title"><span class="greeting">Hi there! </span><span class="name">I'm Deepak Jose</span></h1>
-      <p class="description">
-        I am a full-time web developer and a self-taught data science enthusiast. Additionally, I am an educational
-        content creator with over 200,000 followers and a writer by hobby.
-      </p>
+      <h1 class="title">
+        <div><span class="greeting">Hi </span> <span class="greeting"> there! </span></div>
+        <div><span class="name">I'm </span><span class="name">Deepak
+          </span><span class="name"> Jose</span></div>
+      </h1>
+
+      <p class="description">I am a full-time web developer, a self-taught data science enthusiast, an
+        educational content creator with over 200,000 followers, and a writer by hobby.</p>
+
     </div>
-    <div class="picture-container">
-      <div class="ellipse-border-only">
-        <div class="image"></div>
-      </div>
-      <div class="download-cv">
-        <img src="../../../assets/download.png" alt="Download Resume" class="download-icon">
-        <h3>Resume</h3>
+    <div class="picture-container-cover">
+      <div class="picture-container">
+        <div class="ellipse-border-only">
+          <div class="image"></div>
+        </div>
+        <div class="download-cv" (click)="downloadCV()">
+          <img src="../../../assets/download.png" alt="Download Resume" class="download-icon">
+          <h3>Resume</h3>
+
+        </div>
       </div>
     </div>
   </div>
 </section>
+<div class="cursor" [style.top]="top" [style.left]="left" [ngClass]="{'expand':expand}"></div>

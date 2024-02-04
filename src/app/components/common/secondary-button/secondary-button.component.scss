@@ -1,0 +1,20 @@
+button {
+  background: transparent;
+  color: white;
+  padding: 15px 25px;
+  border-style: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in;
+
+  &:hover {
+    background: rgb(255, 255, 255);
+    color: var(--primaryColourDark);
+  }
+  &:active {
+    background: rgb(187, 187, 187);
+    color: var(--primaryColourDark);
+  }
+}

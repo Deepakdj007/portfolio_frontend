@@ -14,5 +14,20 @@
     <a class="link">Skills</a>
     <a class="link">About Me</a>
   </div>
+  <div class="small-screen" (click)="toggleLinks()">
+    <div class="link-open-button">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <div class="small-screen-links" [@fadeInOut]="linkOpen ? 'open' : 'closed'">
+      <a class="link">Projects</a>
+      <a class="link">Skills</a>
+      <a class="link">About Me</a>
+    </div>
+
+
+  </div>
   <app-social-buttons></app-social-buttons>
 </nav>

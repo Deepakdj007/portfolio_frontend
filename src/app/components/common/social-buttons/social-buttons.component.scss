@@ -1,13 +1,13 @@
 .social-buttons {
   display: flex;
-  gap: 23px;
+  gap: 2rem;
 
   .button {
-    height: 27px;
-    width: 27px;
     cursor: pointer;
 
     svg {
+      height: 2rem;
+      width: 2rem;
       &:hover {
         #social_button_facebook stop:nth-child(1),
         #social_button_linkedin stop:nth-child(1),
@@ -32,6 +32,28 @@
     svg #social_button_linkedin stop,
     svg #social_button_instagram stop {
       transition: stop-color 0.35s;
+    }
+  }
+}
+@media screen and (max-width: 1050px) {
+  .social-buttons {
+    gap: 0.5rem;
+    .button {
+      svg {
+        height: 1.1rem;
+        width: 1.1rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .social-buttons {
+    gap: 0.5rem;
+    .button {
+      svg {
+        height: 1rem;
+        width: 1rem;
+      }
     }
   }
 }

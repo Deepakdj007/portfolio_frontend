@@ -1,0 +1,8 @@
+<section class="projects-section">
+  <h1 class="sub-title">Projects</h1>
+  <div class="project-cards">
+    @for (project of projects; track $index) {
+    <app-project-card [project]="project"></app-project-card>
+    }
+  </div>
+</section>

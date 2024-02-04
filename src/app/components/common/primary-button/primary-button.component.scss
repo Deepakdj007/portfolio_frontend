@@ -1,8 +1,19 @@
-button {
-  background: linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%);
+.primary-button {
+  background: var(--primaryGradient);
+  opacity: 1;
   color: white;
   padding: 15px 25px;
   border-style: none;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease-out; /* Adjust the duration as needed */
+}
+
+.primary-button:hover {
+  box-shadow: #13adc7 0px 4px 15px 0px;
+}
+
+.primary-button:active {
+  box-shadow: #13adc7 0px 7px 25px 0px;
 }
