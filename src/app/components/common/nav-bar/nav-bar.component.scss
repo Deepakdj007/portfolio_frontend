@@ -83,7 +83,7 @@
     gap: 10%;
 
     .link {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       cursor: pointer;
       position: relative;
 
@@ -113,15 +113,15 @@
     .small-screen-links {
       position: absolute;
       box-shadow: #945dd6 0px 0px 6px 0px;
-      width: 200px;
-      height: 50px;
+      width: 180px;
+      height: 45px;
       align-items: center;
       justify-content: center;
       display: flex;
       border: 1px solid #6978d1;
       border-radius: 25px;
       padding: 0px 15px;
-      gap: 10px;
+      gap: 20px;
     }
     .link-open-button {
       display: flex;
