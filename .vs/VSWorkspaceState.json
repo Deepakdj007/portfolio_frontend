@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\common",
+    "\\src\\app\\components\\common\\back-to-top-button"
+  ],
+  "SelectedNode": "\\src\\app\\components\\common\\back-to-top-button\\back-to-top-button.component.html",
+  "PreviewInSolutionExplorer": false
+}
