@@ -106,23 +106,48 @@
         object-fit: contain;
         width: 70%;
         height: 70%;
+        position: relative;
+        z-index: 2;
         border-radius: 50%;
         background: url("../../../assets/my-pic.jpg");
         background-size: cover;
         transition: transform 1s, filter 1s;
         filter: grayscale(100%);
-        box-shadow: #13adc7 0px 7px 29px 0px;
+        box-shadow: none;
         transition: box-shadow 2s ease-in-out;
         animation: slowBreatheIn 2s infinite alternate
           cubic-bezier(0.4, 0.2, 0.6, 1);
+      }
+      .skills-logos {
+        position: relative;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 5%;
+        left: 5%;
+        z-index: 0;
+        .large-skills {
+          height: 50px;
+          position: absolute;
+          top: 42%;
+          left: 38%;
+          transition: top 1s ease-in-out, left 1s ease-in-out; /* Adjust duration and timing function as needed */
+        }
+        .large-skills:nth-child(5) {
+          height: 54px;
+        }
+        .large-skills:nth-child(7) {
+          height: 46px;
+        }
       }
       .download-cv {
         box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
         width: 20%;
         height: 20%;
         position: absolute;
-        left: -12%;
-        top: 40%;
+        left: 40%;
+        top: 78%;
         transform: rotate(-180deg);
         display: flex;
         justify-content: center;
@@ -184,18 +209,107 @@
         .ellipse-border-only {
           animation: breatheOut 2s infinite alternate
             cubic-bezier(0.4, 0.2, 0.6, 1);
+          box-shadow: #000435 -100px 100px 100em 20em;
         }
 
         .image {
           /* ... Your existing styles ... */
           filter: grayscale(0%);
-          box-shadow: #000435 -100px 100px 100em 20em;
-
+          box-shadow: #000435 0px 0px 42px 20px;
           animation: breatheIn 2s infinite alternate
             cubic-bezier(0.4, 0.2, 0.6, 1);
           transition: transform 1s, filter 1s; /* Add transition property */
         }
+        .skills-logos {
+          z-index: 1;
+          .large-skills:nth-child(1) {
+            animation: deepBreath 1s infinite alternate;
+            animation-delay: 0.1s;
+            filter: drop-shadow(1px 2px 4px rgb(255, 0, 76));
+            top: calc(50% - 16rem);
+            left: calc(50% - 3rem);
+          }
 
+          .large-skills:nth-child(2) {
+            animation: deepBreath 1s infinite alternate;
+            animation-delay: 0.2s;
+            filter: drop-shadow(1px 2px 4px rgb(0, 255, 55));
+            top: calc(50% - 11rem);
+            left: calc(50% + 9rem);
+          }
+
+          .large-skills:nth-child(3) {
+            animation: deepBreath 1s infinite alternate;
+            animation-delay: 0.3s;
+            filter: drop-shadow(1px 2px 4px rgb(0, 255, 55));
+            top: 44%;
+            left: calc(50% - 17rem);
+          }
+
+          .large-skills:nth-child(4) {
+            animation: deepBreath 1s infinite alternate;
+            animation-delay: 0.4s;
+            filter: drop-shadow(1px 2px 4px rgb(0, 110, 255));
+            top: 44%;
+            left: calc(50% + 13rem);
+          }
+
+          .large-skills:nth-child(5) {
+            animation: deepBreath 1s infinite alternate;
+            animation-delay: 0.5s;
+            filter: drop-shadow(1px 2px 4px rgb(0, 140, 255));
+            top: calc(50% - 11rem);
+            left: calc(50% - 15rem);
+          }
+          .large-skills:nth-child(6) {
+            animation: deepBreath 1s infinite alternate;
+            animation-delay: 0.6s;
+            filter: drop-shadow(1px 2px 4px rgb(255, 196, 0));
+            top: calc(50% + 9rem);
+            left: calc(50% - 17rem);
+          }
+          .large-skills:nth-child(7) {
+            animation: deepBreath 1s infinite alternate;
+            animation-delay: 0.7s;
+            filter: drop-shadow(1px 2px 4px rgb(255, 0, 234));
+            top: calc(50% + 9rem);
+            left: calc(50% + 10rem);
+          }
+          @media screen and (max-width: 768px) {
+            .large-skills:nth-child(1) {
+              top: calc(50% - 20rem);
+              left: calc(50% - 4rem);
+            }
+
+            .large-skills:nth-child(2) {
+              top: calc(50% - 15rem);
+              left: calc(50% + 10rem);
+            }
+
+            .large-skills:nth-child(3) {
+              top: 42%;
+              left: calc(50% - 21rem);
+            }
+
+            .large-skills:nth-child(4) {
+              top: 42%;
+              left: calc(50% + 15rem);
+            }
+
+            .large-skills:nth-child(5) {
+              top: calc(50% - 15rem);
+              left: calc(50% - 18rem);
+            }
+            .large-skills:nth-child(6) {
+              top: calc(50% + 11rem);
+              left: calc(50% - 22rem);
+            }
+            .large-skills:nth-child(7) {
+              top: calc(50% + 11rem);
+              left: calc(50% + 10rem);
+            }
+          }
+        }
         .download-cv {
           filter: grayscale(0%);
           animation: rotateAroundEllipse 2s forwards,
@@ -230,6 +344,14 @@
   }
   100% {
     transform: scale(0.9);
+  }
+}
+@keyframes deepBreath {
+  0% {
+    transform: scale(0.25);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 @keyframes rotateAroundEllipse {
@@ -318,12 +440,6 @@
       width: 350px;
       min-height: 350px;
       justify-content: center;
-      .picture-container {
-        .download-cv {
-          left: 40%;
-          top: 80%;
-        }
-      }
     }
   }
 }
@@ -333,12 +449,6 @@
       width: 250px;
       min-height: 250px;
       justify-content: center;
-      .picture-container {
-        .download-cv {
-          left: 40%;
-          top: 80%;
-        }
-      }
     }
   }
 }
