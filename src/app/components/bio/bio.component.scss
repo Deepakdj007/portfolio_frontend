@@ -8,6 +8,32 @@
   justify-content: space-between;
   gap: 50px;
   margin: 50px 0px;
+  &:hover {
+    .picture-container-cover {
+      .picture-container {
+        .ellipse-border-only {
+          animation: breatheOut 2s infinite alternate
+            cubic-bezier(0.4, 0.2, 0.6, 1);
+          box-shadow: #000435 -100px 100px 100em 20em;
+        }
+
+        .image {
+          /* ... Your existing styles ... */
+          filter: grayscale(0%);
+          box-shadow: #000435 0px 0px 42px 20px;
+          animation: breatheIn 2s infinite alternate
+            cubic-bezier(0.4, 0.2, 0.6, 1);
+          transition: transform 1s, filter 1s; /* Add transition property */
+        }
+        .skills-logos {
+          z-index: 1;
+          .large-skills {
+            transform: rotate(calc(360deg / 8 * var(--i))) !important;
+          }
+        }
+      }
+    }
+  }
   .info-content {
     width: 40%;
     display: flex;
@@ -168,30 +194,6 @@
         .large-skills:nth-child(8) {
           img {
             height: 60%;
-          }
-        }
-      }
-    }
-    &:hover {
-      .picture-container {
-        .ellipse-border-only {
-          animation: breatheOut 2s infinite alternate
-            cubic-bezier(0.4, 0.2, 0.6, 1);
-          box-shadow: #000435 -100px 100px 100em 20em;
-        }
-
-        .image {
-          /* ... Your existing styles ... */
-          filter: grayscale(0%);
-          box-shadow: #000435 0px 0px 42px 20px;
-          animation: breatheIn 2s infinite alternate
-            cubic-bezier(0.4, 0.2, 0.6, 1);
-          transition: transform 1s, filter 1s; /* Add transition property */
-        }
-        .skills-logos {
-          z-index: 1;
-          .large-skills {
-            transform: rotate(calc(360deg / 8 * var(--i))) !important;
           }
         }
       }
