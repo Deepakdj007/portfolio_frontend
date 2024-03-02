@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { PrimaryButtonComponent } from '../common/primary-button/primary-button.component';
-
+import { NgClass } from '@angular/common';
 @Component({
   selector: 'app-bio',
   standalone: true,
-  imports: [PrimaryButtonComponent],
+  imports: [PrimaryButtonComponent, NgClass],
   templateUrl: './bio.component.html',
   styleUrl: './bio.component.scss',
 })
