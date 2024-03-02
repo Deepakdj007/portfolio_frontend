@@ -1,13 +1,20 @@
 .card-container {
-  background: linear-gradient(#0f1624, #0f1624) padding-box,
-    linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%) border-box;
+  background: linear-gradient(#000000db, #000714f0) padding-box,
+    linear-gradient(270deg, #13acc7f5 0%, #6979d1ee 66.67%, #935dd6ef 100%)
+      border-box;
   border-radius: 20px;
   border: 1px solid transparent;
   padding: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: max-content;
   align-items: flex-start;
+  transition: transform 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
   .card-image-container {
     width: 100%;
     min-height: 100px;
@@ -34,7 +41,6 @@
     opacity: 0.8;
     margin: 0px 0px 10px 0px;
     width: 100%;
-    min-height: 100px;
   }
   .action-buttons {
     margin-top: 10px;
@@ -43,5 +49,11 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    padding: 15px;
   }
 }

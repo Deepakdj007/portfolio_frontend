@@ -18,3 +18,8 @@ button {
     color: var(--primaryColourDark);
   }
 }
+@media screen and (max-width: 768px) {
+  button {
+    padding: 10px 15px;
+  }
+}

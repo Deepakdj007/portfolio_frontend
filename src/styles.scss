@@ -39,9 +39,13 @@ body {
 .app {
   padding: 0px 20%;
 }
-
+app-root {
+  z-index: 1;
+  position: relative;
+}
 .circles {
   position: fixed;
+  z-index: 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -51,6 +55,7 @@ body {
 
 .circles li {
   position: absolute;
+  z-index: 0;
   display: block;
   list-style: none;
   width: 20px;

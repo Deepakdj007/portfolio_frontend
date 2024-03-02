@@ -9,7 +9,7 @@
 
       <p class="description">I am a full-time web developer, a self-taught data science enthusiast, an
         educational content creator with over 200,000 followers, and a writer by hobby.</p>
-
+      <app-primary-button buttonName="Resume"></app-primary-button>
     </div>
     <div class="picture-container-cover">
       <div class="picture-container">
@@ -33,7 +33,9 @@
             <li class="large-skills" style="--i:5">
               <img src="../../../assets/skills/wordpress.png" alt="">
             </li>
-
+            <li class="large-skills" style="--i:6">
+              <img src="../../../assets/skills/tensorflow.png" alt="">
+            </li>
             <li class="large-skills" style="--i:7">
               <img src="../../../assets/skills/sass.png" alt="">
             </li>
@@ -42,13 +44,7 @@
             </li>
           </div>
         </div>
-        <div class="download-cv" (click)="downloadCV()">
-          <img src="../../../assets/download.png" alt="Download Resume" class="download-icon">
-          <h3>Resume</h3>
-
-        </div>
       </div>
     </div>
   </div>
 </section>
-<div class="cursor" [style.top]="top" [style.left]="left" [ngClass]="{'expand':expand}"></div>

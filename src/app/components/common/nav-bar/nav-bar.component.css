@@ -1,0 +1,176 @@
+.nav-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 2;
+  align-items: center;
+  height: 137px;
+}
+.nav-bar h1,
+.nav-bar a {
+  color: #fff;
+}
+.nav-bar .app-name-container {
+  position: relative;
+  display: flex;
+  width: 35%;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+.nav-bar .app-name-container .app-name {
+  font-family: Poppins;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+.nav-bar .app-name-container .tooltip-container {
+  position: relative;
+  display: inline-block;
+  top: 50px;
+  left: 90px;
+}
+.nav-bar .app-name-container .triangle-tip,
+.nav-bar .app-name-container .content-cylinder {
+  box-shadow: 0px 10px 30px 0px rgba(147, 94, 214, 0.35);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease-in;
+}
+.nav-bar .app-name-container .triangle-tip {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #945dd6; /* Adjust the color as needed */
+  top: -49px;
+  left: -45px;
+}
+.nav-bar .app-name-container .content-cylinder {
+  background: #945dd6;
+  color: #fff; /* Adjust the text color as needed */
+  padding: 10px 20px;
+  border-radius: 25px;
+  top: -40px; /* Adjust the distance above the content */
+  white-space: nowrap; /* Prevent content from breaking to the next line */
+  z-index: 1; /* Ensure the tooltip appears above other content */
+}
+.nav-bar .app-name-container .app-name:hover + .tooltip-container .triangle-tip,
+.nav-bar .app-name-container .app-name:hover + .tooltip-container .content-cylinder {
+  opacity: 1;
+  visibility: visible;
+}
+.nav-bar app-social-buttons {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-bar .links {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.nav-bar .links .link {
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+}
+.nav-bar .links .link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: var(--primaryGradient);
+  transition: width 0.35s ease;
+}
+.nav-bar .links .link:hover::after {
+  width: 100%;
+}
+.nav-bar .small-screen {
+  display: none;
+  position: relative;
+  width: 30%;
+  justify-content: center;
+  height: 30px;
+  align-items: center;
+}
+.nav-bar .small-screen .small-screen-links {
+  position: absolute;
+  box-shadow: #945dd6 0px 0px 6px 0px;
+  width: 150px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 1px solid #6978d1;
+  border-radius: 25px;
+  padding: 0px 15px;
+  gap: 10px;
+}
+.nav-bar .small-screen .link-open-button {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar .small-screen .link-open-button .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  animation: waveAnimation 1s infinite;
+}
+.nav-bar .small-screen .link-open-button .dot:nth-child(1) {
+  background-color: #13adc7;
+  animation-delay: 0.2s;
+}
+.nav-bar .small-screen .link-open-button .dot:nth-child(2) {
+  background-color: #6978d1;
+  animation-delay: 0.4s;
+}
+.nav-bar .small-screen .link-open-button .dot:nth-child(3) {
+  background-color: #945dd6;
+  animation-delay: 0.6s;
+}
+
+@keyframes waveAnimation {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    box-shadow: #13adc7 0px 0px 3px 0px;
+  }
+  40% {
+    transform: translateY(-8px);
+    box-shadow: #13adc7 0px 0px 6px 0px;
+  }
+  60% {
+    transform: translateY(-4px);
+    box-shadow: #13adc7 0px 0px 9px 0px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .nav-bar .links {
+    width: 40%;
+  }
+  .nav-bar .app-name-container .app-name {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-bar .app-name-container .app-name {
+    font-size: 1rem;
+  }
+  .nav-bar .links {
+    display: none;
+  }
+  .nav-bar .small-screen {
+    display: flex;
+  }
+}/*# sourceMappingURL=nav-bar.component.css.map */

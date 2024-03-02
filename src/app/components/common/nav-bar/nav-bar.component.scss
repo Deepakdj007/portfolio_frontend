@@ -5,7 +5,7 @@
   position: sticky;
   z-index: 2;
   align-items: center;
-  height: 137px;
+  height: 15dvh;
 
   h1,
   a {
@@ -76,32 +76,33 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  .link {
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0%;
+      height: 2px;
+      background: var(--primaryGradient);
+      transition: width 0.35s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
   .links {
-    width: 30%;
+    width: 35%;
     display: flex;
     justify-content: center;
     gap: 10%;
-
-    .link {
-      font-size: 1.2rem;
-      cursor: pointer;
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        width: 0%;
-        height: 2px;
-        background: var(--primaryGradient);
-        transition: width 0.35s ease;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
-    }
   }
   .small-screen {
     display: none;
@@ -114,7 +115,9 @@
       position: absolute;
       box-shadow: #945dd6 0px 0px 6px 0px;
       width: 200px;
-      height: 50px;
+
+      height: 35px;
+
       align-items: center;
       justify-content: center;
       display: flex;
@@ -175,7 +178,7 @@
     }
     .app-name-container {
       .app-name {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -184,7 +187,7 @@
   .nav-bar {
     .app-name-container {
       .app-name {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
     }
 
