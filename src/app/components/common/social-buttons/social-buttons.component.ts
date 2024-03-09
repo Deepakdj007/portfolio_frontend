@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
 })
 export class SocialButtonsComponent {
   navigateTo(letter: string) {
-    if (letter == 'f') {
-      window.open('https://www.facebook.com/');
+    if (letter == 'g') {
+      window.open('https://github.com/Deepakdj007');
     } else if (letter == 'i') {
-      window.open('https://www.instagram.com/datasciencebrain/');
+      window.open('https://www.instagram.com/__deepakjose__/');
     } else if (letter == 'l') {
       window.open('https://www.linkedin.com/in/deepakjosecodes/');
     }

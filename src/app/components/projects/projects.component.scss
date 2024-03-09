@@ -1,10 +1,6 @@
 .projects-section {
   margin-top: 5dvh;
-  padding-bottom: 5dvh;
-  .title {
-    font-size: 2.5rem;
-    color: white;
-  }
+  padding-bottom: 10dvh;
   .project-cards-container {
     display: flex;
     align-items: center;
@@ -34,7 +30,7 @@
       left: -1.5rem;
       z-index: 5;
       &:active {
-        transform: translateX(-4px);
+        transform: translateX(-6px);
       }
     }
     .right-scroll {
@@ -43,7 +39,7 @@
 
       z-index: 5;
       &:active {
-        transform: translateX(4px) !important;
+        transform: translateX(6px) !important;
       }
     }
 

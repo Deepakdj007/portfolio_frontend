@@ -1,0 +1,129 @@
+.skills-container {
+  .skills-list {
+    display: flex;
+    flex-flow: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 50px 0px;
+
+    .skill {
+      width: 160px;
+      height: 160px;
+      position: relative;
+      .outer {
+        width: 160px;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        box-shadow: 6px 6px 10px -1px #060c16, -6px -6px 10px -1px #101227;
+        border-radius: 50%;
+        .inner {
+          width: 130px;
+          height: 130px;
+          box-shadow: inset 4px 4px 6px -1px #0c0d1c,
+            inset -4px -4px 6px -1px #121b2d;
+          background-color: transparent;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .skill-image {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            img {
+              height: 75%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-90deg);
+      circle {
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 16px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+      }
+      #Angular {
+        animation: anim-angular 1s linear forwards;
+      }
+      #Python {
+        animation: anim-python 1s linear forwards;
+      }
+      #TypeScript {
+        animation: anim-typescript 1s linear forwards;
+      }
+      #MongoDB {
+        animation: anim-mongodb 1s linear forwards;
+      }
+      #NodeJs {
+        animation: anim-nodejs 1s linear forwards;
+      }
+      #Scss {
+        animation: anim-scss 1s linear forwards;
+      }
+      #Wordpress {
+        animation: anim-wordpress 1s linear forwards;
+      }
+      #Tensorflow {
+        animation: anim-tensorflow 1s linear forwards;
+      }
+    }
+  }
+}
+
+@keyframes anim-angular {
+  100% {
+    stroke-dashoffset: calc(450 - 450 * (80 / 100));
+  }
+}
+@keyframes anim-python {
+  100% {
+    stroke-dashoffset: calc(450 - 450 * (80 / 100));
+  }
+}
+@keyframes anim-typescript {
+  100% {
+    stroke-dashoffset: calc(450 - 450 * (80 / 100));
+  }
+}
+@keyframes anim-mongodb {
+  100% {
+    stroke-dashoffset: calc(450 - 450 * (60 / 100));
+  }
+}
+@keyframes anim-nodejs {
+  100% {
+    stroke-dashoffset: calc(450 - 450 * (60 / 100));
+  }
+}
+@keyframes anim-scss {
+  100% {
+    stroke-dashoffset: calc(450 - 450 * (60 / 100));
+  }
+}
+@keyframes anim-wordpress {
+  100% {
+    stroke-dashoffset: calc(450 - 450 * (60 / 100));
+  }
+}
+@keyframes anim-tensorflow {
+  100% {
+    stroke-dashoffset: calc(450 - 450 * (40 / 100));
+  }
+}

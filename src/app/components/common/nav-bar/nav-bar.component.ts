@@ -20,14 +20,14 @@ import {
         'open',
         style({
           opacity: 1,
-          top: '40px',
+          top: '60px',
         })
       ),
       state(
         'closed',
         style({
           opacity: 0,
-          top: '0px',
+          top: '40px',
         })
       ),
       transition('closed <=> open', animate('500ms ease-in-out')), // Adjust the duration as needed
@@ -37,7 +37,21 @@ import {
 export class NavBarComponent {
   linkOpen: boolean = false;
 
-  toggleLinks() {
+  toggleLinks(event: any) {
+    event.stopPropagation();
     this.linkOpen = !this.linkOpen;
+  }
+
+  openLink(linkNumber: number) {
+    switch (linkNumber) {
+      case 1: {
+        window.open('https://www.instagram.com/datasciencebrain/');
+        break;
+      }
+      case 2: {
+        window.open('https://deepakjosecodes.com/');
+        break;
+      }
+    }
   }
 }

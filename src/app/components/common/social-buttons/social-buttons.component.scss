@@ -9,26 +9,26 @@
       height: 2rem;
       width: 2rem;
       &:hover {
-        #social_button_facebook stop:nth-child(1),
+        #social_button_github stop:nth-child(1),
         #social_button_linkedin stop:nth-child(1),
         #social_button_instagram stop:nth-child(1) {
           stop-color: #31cbe5; /* Change to the desired color */
         }
 
-        #social_button_facebook stop:nth-child(2),
+        #social_button_github stop:nth-child(2),
         #social_button_linkedin stop:nth-child(2),
         #social_button_instagram stop:nth-child(2) {
           stop-color: #8796ef; /* Change to the desired color */
         }
 
-        #social_button_facebook stop:nth-child(3),
+        #social_button_github stop:nth-child(3),
         #social_button_linkedin stop:nth-child(3),
         #social_button_instagram stop:nth-child(3) {
           stop-color: #b27bf4; /* Change to the desired color */
         }
       }
     }
-    svg #social_button_facebook stop,
+    svg #social_button_github stop,
     svg #social_button_linkedin stop,
     svg #social_button_instagram stop {
       transition: stop-color 0.35s;

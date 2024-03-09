@@ -10,12 +10,10 @@
   </div>
 
   <div class="links">
-    <a class="link">Projects</a>
-    <a class="link">Skills</a>
-    <a class="link">About Me</a>
-    <a class="link" href="https://deepakjosecodes.com/">My Blog</a>
+    <a class="link" (click)="openLink(1)">My Influencer Page</a>
+    <a class="link" (click)="openLink(2)">My Blog</a>
   </div>
-  <div class="small-screen" (click)="toggleLinks()">
+  <div class="small-screen" (click)="toggleLinks($event)">
     <div class="link-open-button">
       <div class="dot"></div>
       <div class="dot"></div>
@@ -23,10 +21,8 @@
     </div>
 
     <div class="small-screen-links" [@fadeInOut]="linkOpen ? 'open' : 'closed'">
-      <a class="link">Projects</a>
-      <a class="link">Skills</a>
-      <a class="link">About Me</a>
-      <a class="link" href="https://deepakjosecodes.com/" target="_blank">My Blog</a>
+      <a class="link" (click)="openLink(1)">My Influencer Page</a>
+      <a class="link" (click)="openLink(2)">My Blog</a>
 
     </div>
 

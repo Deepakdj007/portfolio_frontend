@@ -1,0 +1,27 @@
+<div class="skills-container">
+  <div class="sub-title">Skills</div>
+  <div class="skills-list">
+    @for (skill of skills; track $index) {
+    <div class="skill">
+      <div class="outer">
+        <div class="inner">
+          <div class="skill-image">
+            <img [src]="skill.image" alt="">
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+        <defs>
+          <linearGradient id="GradientColor">
+            <stop offset="0%" stop-color="#13adc7" />
+            <stop offset="66.67%" stop-color="#6978d1" />
+            <stop offset="100%" stop-color="#945dd6" />
+          </linearGradient>
+        </defs>
+        <circle [id]="skill.name" cx="80" cy="80" r="70" stroke-linecap="round" />
+      </svg>
+    </div>
+    }
+
+  </div>
+</div>
