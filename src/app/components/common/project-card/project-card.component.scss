@@ -1,16 +1,19 @@
 .card-container {
-  background: linear-gradient(#000000db, #000714f0) padding-box,
-    linear-gradient(270deg, #13acc7f5 0%, #6979d1ee 66.67%, #935dd6ef 100%)
-      border-box;
+  background: linear-gradient(
+    270deg,
+    rgb(1 18 20 / 72%) 0%,
+    rgb(1 4 22 / 66%) 66.67%,
+    rgb(10 1 20 / 65%) 100%
+  );
   border-radius: 20px;
-  border: 1px solid transparent;
+  box-shadow: rgb(6 11 20) 0px 3px 8px;
   padding: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 25vw;
-  max-width: 360px;
+  width: 59vw;
+  max-width: 400px;
   min-width: 200px;
   transition: transform 0.4s ease-in-out;
 

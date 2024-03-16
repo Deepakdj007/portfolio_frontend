@@ -2,11 +2,37 @@
   .skills-list {
     display: flex;
     flex-flow: wrap;
-    gap: 50px;
+    gap: 100px;
     justify-content: center;
     padding: 50px 0px;
 
     .skill {
+      .skill-iamge-and-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin-top: 10px;
+        .skill-image {
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+
+          img {
+            height: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .skill-name {
+          font-size: 1.2rem;
+          color: white;
+        }
+      }
       width: 160px;
       height: 160px;
       position: relative;
@@ -16,38 +42,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: transparent;
-        box-shadow: 6px 6px 10px -1px #060c16, -6px -6px 10px -1px #101227;
+        background-color: #0f162499;
+        box-sizing: border-box;
+        border: 14px solid #0a101a;
         border-radius: 50%;
-        .inner {
-          width: 130px;
-          height: 130px;
-          box-shadow: inset 4px 4px 6px -1px #0c0d1c,
-            inset -4px -4px 6px -1px #121b2d;
-          background-color: transparent;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .skill-image {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
 
-            img {
-              height: 75%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-          }
+        .counter {
+          font-size: 50px;
+          color: white;
+          font-weight: 900;
         }
       }
     }
     svg {
+      width: 160px;
+      height: 160px;
       position: absolute;
       top: 0;
       left: 0;
@@ -55,9 +64,11 @@
       circle {
         fill: none;
         stroke: url(#GradientColor);
-        stroke-width: 16px;
+        stroke-width: 14px;
         stroke-dasharray: 450;
-        stroke-dashoffset: 450;
+        cx: 80;
+        cy: 80;
+        r: 73;
       }
       #Angular {
         animation: anim-angular 1s linear forwards;
@@ -86,6 +97,136 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .skills-container {
+    .skills-list {
+      gap: 75px;
+      .skill {
+        width: 120px;
+        height: 120px;
+        .skill-iamge-and-name {
+          margin-top: 8px;
+          .skill-image {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .outer {
+          width: 120px;
+          height: 120px;
+          border: 9px solid #0a101a;
+          border-radius: 50%;
+          .counter {
+            font-size: 40px;
+          }
+        }
+        svg {
+          width: 120px;
+          height: 120px;
+          circle {
+            fill: none;
+            stroke-width: 9px;
+            stroke-dasharray: 380;
+            cx: 60;
+            cy: 60;
+            r: 55;
+          }
+          #Angular {
+            animation: anim-angular-medium 1s linear forwards;
+          }
+          #Python {
+            animation: anim-python-medium 1s linear forwards;
+          }
+          #TypeScript {
+            animation: anim-typescript-medium 1s linear forwards;
+          }
+          #MongoDB {
+            animation: anim-mongodb-medium 1s linear forwards;
+          }
+          #NodeJs {
+            animation: anim-nodejs-medium 1s linear forwards;
+          }
+          #Scss {
+            animation: anim-scss-medium 1s linear forwards;
+          }
+          #Wordpress {
+            animation: anim-wordpress-medium 1s linear forwards;
+          }
+          #Tensorflow {
+            animation: anim-tensorflow-medium 1s linear forwards;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .skills-container {
+    .skills-list {
+      gap: 50px;
+      .skill {
+        width: 80px;
+        height: 80px;
+        .skill-iamge-and-name {
+          margin-top: 5px;
+          .skill-image {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .outer {
+          width: 80px;
+          height: 80px;
+          border: 5px solid #0a101a;
+          border-radius: 50%;
+          .counter {
+            font-size: 28px;
+          }
+        }
+        svg {
+          width: 80px;
+          height: 80px;
+          circle {
+            fill: none;
+            stroke-width: 5px;
+            stroke-dasharray: 260;
+            cx: 40;
+            cy: 40;
+            r: 37;
+          }
+          #Angular {
+            animation: anim-angular-small 1s linear forwards;
+          }
+          #Python {
+            animation: anim-python-small 1s linear forwards;
+          }
+          #TypeScript {
+            animation: anim-typescript-small 1s linear forwards;
+          }
+          #MongoDB {
+            animation: anim-mongodb-small 1s linear forwards;
+          }
+          #NodeJs {
+            animation: anim-nodejs-small 1s linear forwards;
+          }
+          #Scss {
+            animation: anim-scss-small 1s linear forwards;
+          }
+          #Wordpress {
+            animation: anim-wordpress-small 1s linear forwards;
+          }
+          #Tensorflow {
+            animation: anim-tensorflow-small 1s linear forwards;
+          }
+        }
+      }
+    }
+  }
+}
+
+//animations
 
 @keyframes anim-angular {
   100% {
@@ -125,5 +266,89 @@
 @keyframes anim-tensorflow {
   100% {
     stroke-dashoffset: calc(450 - 450 * (40 / 100));
+  }
+}
+
+// Animations Medium screen
+@keyframes anim-angular-medium {
+  100% {
+    stroke-dashoffset: calc(380 - 380 * (80 / 100));
+  }
+}
+@keyframes anim-python-medium {
+  100% {
+    stroke-dashoffset: calc(380 - 380 * (80 / 100));
+  }
+}
+@keyframes anim-typescript-medium {
+  100% {
+    stroke-dashoffset: calc(380 - 380 * (80 / 100));
+  }
+}
+@keyframes anim-mongodb-medium {
+  100% {
+    stroke-dashoffset: calc(380 - 380 * (60 / 100));
+  }
+}
+@keyframes anim-nodejs-medium {
+  100% {
+    stroke-dashoffset: calc(380 - 380 * (60 / 100));
+  }
+}
+@keyframes anim-scss-medium {
+  100% {
+    stroke-dashoffset: calc(380 - 380 * (60 / 100));
+  }
+}
+@keyframes anim-wordpress-medium {
+  100% {
+    stroke-dashoffset: calc(380 - 380 * (60 / 100));
+  }
+}
+@keyframes anim-tensorflow-medium {
+  100% {
+    stroke-dashoffset: calc(380 - 380 * (40 / 100));
+  }
+}
+
+// Animations small screen
+@keyframes anim-angular-small {
+  100% {
+    stroke-dashoffset: calc(280 - 280 * (80 / 100));
+  }
+}
+@keyframes anim-python-small {
+  100% {
+    stroke-dashoffset: calc(280 - 280 * (80 / 100));
+  }
+}
+@keyframes anim-typescript-small {
+  100% {
+    stroke-dashoffset: calc(280 - 280 * (80 / 100));
+  }
+}
+@keyframes anim-mongodb-small {
+  100% {
+    stroke-dashoffset: calc(280 - 280 * (60 / 100));
+  }
+}
+@keyframes anim-nodejs-small {
+  100% {
+    stroke-dashoffset: calc(280 - 280 * (60 / 100));
+  }
+}
+@keyframes anim-scss-small {
+  100% {
+    stroke-dashoffset: calc(280 - 280 * (60 / 100));
+  }
+}
+@keyframes anim-wordpress-small {
+  100% {
+    stroke-dashoffset: calc(280 - 280 * (60 / 100));
+  }
+}
+@keyframes anim-tensorflow-small {
+  100% {
+    stroke-dashoffset: calc(280 - 280 * (40 / 100));
   }
 }

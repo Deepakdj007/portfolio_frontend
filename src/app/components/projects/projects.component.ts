@@ -97,7 +97,7 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
   scrollRight() {
     const projectCards: HTMLElement = this.projectCardsRef.nativeElement;
     projectCards.scrollTo({
-      left: projectCards.scrollLeft + this.cardWidth + 20, // Adjust scroll distance as needed
+      left: projectCards.scrollLeft + this.cardWidth + 30, // Adjust scroll distance as needed
       behavior: 'smooth',
     });
   }
@@ -106,7 +106,7 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
     const firstProjectCard =
       this.projectCardsRef.nativeElement.querySelector('app-project-card');
     if (firstProjectCard) {
-      this.cardWidth = firstProjectCard.offsetWidth - 20;
+      this.cardWidth = firstProjectCard.offsetWidth - 30;
     }
   }
 }

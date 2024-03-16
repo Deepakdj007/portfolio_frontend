@@ -6,11 +6,10 @@
     align-items: center;
     gap: 15px;
     scroll-behavior: smooth; /* Smooth scrolling */
-    padding: 20px;
-    box-shadow: rgb(4 8 16) 3.2px 3.2px 8px 0px inset,
-      rgb(4 15 26) -3.2px -3.2px 8px 0px inset;
+    padding: 30px;
+    background-color: #030a187d;
     border-radius: 30px;
-    margin-top: 15px;
+    margin-top: 50px;
     .scroll {
       padding: 15px;
       display: flex;
@@ -59,7 +58,8 @@
   .projects-section {
     .project-cards-container {
       gap: 5px;
-      padding: 10px;
+      padding: 20px;
+      margin-top: 30px;
       .scroll {
         padding: 5px;
         display: flex;

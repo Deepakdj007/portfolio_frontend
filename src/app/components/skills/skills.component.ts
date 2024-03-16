@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Skill } from '../../models/skill.model';
-
+import { AsyncPipe } from '@angular/common';
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [AsyncPipe],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
@@ -13,42 +13,42 @@ export class SkillsComponent {
     {
       name: 'Angular',
       image: '../../../assets/skills/angular.png',
-      progress: 10,
+      progress: 8,
     },
     {
       name: 'Python',
       image: '../../../assets/skills/python.png',
-      progress: 10,
+      progress: 8,
     },
     {
       name: 'TypeScript',
       image: '../../../assets/skills/typescript.png',
-      progress: 10,
+      progress: 8,
     },
     {
       name: 'MongoDB',
       image: '../../../assets/skills/mongodb.png',
-      progress: 8,
+      progress: 6,
     },
     {
       name: 'NodeJs',
       image: '../../../assets/skills/node.png',
-      progress: 8,
+      progress: 6,
     },
     {
       name: 'Scss',
       image: '../../../assets/skills/sass.png',
-      progress: 8,
+      progress: 6,
     },
     {
       name: 'Wordpress',
       image: '../../../assets/skills/wordpress.png',
-      progress: 8,
+      progress: 6,
     },
     {
       name: 'Tensorflow',
       image: '../../../assets/skills/tensorflow.png',
-      progress: 6,
+      progress: 4,
     },
   ];
 }

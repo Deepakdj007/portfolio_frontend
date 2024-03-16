@@ -4,13 +4,9 @@
     @for (skill of skills; track $index) {
     <div class="skill">
       <div class="outer">
-        <div class="inner">
-          <div class="skill-image">
-            <img [src]="skill.image" alt="">
-          </div>
-        </div>
+        <div class="counter" [id]="skill.name">{{skill.progress *10}}</div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
         <defs>
           <linearGradient id="GradientColor">
             <stop offset="0%" stop-color="#13adc7" />
@@ -18,8 +14,14 @@
             <stop offset="100%" stop-color="#945dd6" />
           </linearGradient>
         </defs>
-        <circle [id]="skill.name" cx="80" cy="80" r="70" stroke-linecap="round" />
+        <circle [id]="skill.name" stroke-linecap="round" />
       </svg>
+      <div class="skill-iamge-and-name">
+        <div class="skill-image">
+          <img [src]="skill.image" alt="">
+        </div>
+        <div class="skill-name">{{skill.name}}</div>
+      </div>
     </div>
     }
 
