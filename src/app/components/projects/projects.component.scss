@@ -1,13 +1,15 @@
 .projects-section {
-  margin-top: 5dvh;
-  padding-bottom: 10dvh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   .project-cards-container {
     display: flex;
     align-items: center;
     gap: 15px;
     scroll-behavior: smooth; /* Smooth scrolling */
-    padding: 30px;
-    background-color: #030a187d;
+    padding: 20px;
+    background-color: #030a184d;
     border-radius: 30px;
     margin-top: 50px;
     .scroll {

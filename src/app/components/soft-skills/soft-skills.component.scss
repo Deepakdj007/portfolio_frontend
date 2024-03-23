@@ -1,0 +1,38 @@
+.soft-skills-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    margin-top: 0px;
+  }
+  .soft-skills-list {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-start;
+    gap: 10dvh;
+    margin: 50px 0;
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+      gap: 5dvh;
+    }
+    .soft-skill {
+      display: flex;
+      gap: 15px;
+      width: 25rem;
+      .decorator {
+        content: "";
+        width: 2rem;
+        height: 2rem;
+        background: var(--roundGradient);
+        border-radius: 50%;
+        box-shadow: #13acc7b9 1px 3px 12px -1px;
+      }
+      .skill-name {
+        font-size: 1.6rem;
+        color: white;
+        font-weight: 500;
+      }
+    }
+  }
+}

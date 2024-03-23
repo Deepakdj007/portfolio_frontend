@@ -2,7 +2,7 @@
   <div class="sub-title">Skills</div>
   <div class="skills-list">
     @for (skill of skills; track $index) {
-    <div class="skill">
+    <div class="skill" [id]="'skill-'+skill.id">
       <div class="outer">
         <div class="counter" [id]="skill.name">{{skill.progress *10}}</div>
       </div>
@@ -22,8 +22,15 @@
         </div>
         <div class="skill-name">{{skill.name}}</div>
       </div>
+      <!-- Skill Deatils -->
+      <div #skillDetail class="skill-detail-container" [id]="'skill-detail-'+skill.id">
+        <div class="skill-name-and-image">
+          <h3 class="skill-name">{{skill.name}}</h3>
+          <img [src]="skill.image" alt="" class="skill-image">
+        </div>
+        <p class="skill-description">{{skill.description}}</p>
+      </div>
     </div>
     }
-
   </div>
 </div>

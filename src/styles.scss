@@ -11,11 +11,16 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$portfolio_frontend-primary: #0f1624;
-$portfolio_frontend-accent: #13adc7;
+$portfolio_frontend-primary: mat.define-palette(mat.$indigo-palette);
+$portfolio_frontend-accent: mat.define-palette(
+  mat.$pink-palette,
+  A200,
+  A100,
+  A400
+);
 
 // The warn palette is optional (defaults to red).
-$portfolio_frontend-warn: #945dd6;
+$portfolio_frontend-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
@@ -47,6 +52,12 @@ $portfolio_frontend-theme: mat.define-light-theme(
     #13adc7 0%,
     #6978d1 66.67%,
     #945dd6 100%
+  );
+  --roundGradient: linear-gradient(
+    310deg,
+    #13adc7 0%,
+    #6978d1 60%,
+    #9239fd 100%
   );
   --primaryGradientDark: linear-gradient(
     270deg,
@@ -80,6 +91,7 @@ body {
 .sub-title {
   font-size: 2.8rem;
   color: white;
+  position: relative;
 }
 
 app-root {
@@ -271,14 +283,14 @@ app-root {
 @media screen and (max-width: 830px) {
   html,
   body {
-    font-size: 8.5px;
+    font-size: 9px;
   }
 }
 
 @media screen and (max-width: 768px) {
   html,
   body {
-    font-size: 8px;
+    font-size: 9px;
     .sub-title {
       display: flex;
       justify-content: center;

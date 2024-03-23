@@ -1,12 +1,18 @@
 .skills-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   .skills-list {
     display: flex;
     flex-flow: wrap;
-    gap: 100px;
+    gap: 125px;
     justify-content: center;
     padding: 50px 0px;
 
     .skill {
+      transition: transform 0.5s ease-in-out;
+
       .skill-iamge-and-name {
         display: flex;
         justify-content: center;
@@ -29,7 +35,7 @@
           }
         }
         .skill-name {
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           color: white;
         }
       }
@@ -53,7 +59,121 @@
           font-weight: 900;
         }
       }
+      .skill-detail-container {
+        max-width: 35vw;
+        transition: opacity 0.5s ease;
+        opacity: 0;
+        transform: scale(0);
+        height: max-content;
+        width: 250px;
+        background: linear-gradient(
+          270deg,
+          rgb(1 18 20 / 97%) 0%,
+          rgb(1 4 22 / 94%) 66.67%,
+          rgb(10 1 20 / 98%) 100%
+        );
+        box-shadow: rgb(6, 11, 20) 0px 3px 8px;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        color: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 3;
+        .skill-name-and-image {
+          display: flex;
+          gap: 10px;
+          .skill-name {
+            font-size: 1.2rem;
+            color: white;
+          }
+          .skill-image {
+            width: 25px;
+            height: 25px;
+          }
+        }
+
+        .skill-description {
+          font-size: 0.8rem;
+          color: #929eb0;
+        }
+      }
     }
+    #skill-1 {
+      &:hover {
+        #skill-detail-1 {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    #skill-2 {
+      &:hover {
+        #skill-detail-2 {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    #skill-3 {
+      &:hover {
+        #skill-detail-3 {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    #skill-4 {
+      &:hover {
+        #skill-detail-4 {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    #skill-5 {
+      &:hover {
+        #skill-detail-5 {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    #skill-6 {
+      &:hover {
+        #skill-detail-6 {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    #skill-7 {
+      &:hover {
+        #skill-detail-7 {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    #skill-8 {
+      &:hover {
+        #skill-detail-8 {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
     svg {
       width: 160px;
       height: 160px;
@@ -100,6 +220,8 @@
 
 @media screen and (max-width: 768px) {
   .skills-container {
+    margin-top: 0px;
+    padding-bottom: 8dvh;
     .skills-list {
       gap: 75px;
       .skill {
@@ -165,7 +287,7 @@
 @media screen and (max-width: 468px) {
   .skills-container {
     .skills-list {
-      gap: 50px;
+      gap: 75px;
       .skill {
         width: 80px;
         height: 80px;
