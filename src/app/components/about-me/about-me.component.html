@@ -1,0 +1,27 @@
+<div class="about-me-container">
+  <div class="sub-title">About me</div>
+  <div class="contents">
+    <div class="dates-container">
+      @for (date of dates; track $index) {
+      <div class="date fixed-width">{{date}}</div>
+      }
+    </div>
+    <div class="line-and-balls">
+      @for (date of dates; track $index) {
+      <div class="line-and-ball fixed-width">
+        <div class="line">
+          <div class="ball"></div>
+        </div>
+      </div>
+      }
+    </div>
+    <div class="info-container">
+      @for (currentInfo of info; track $index) {
+      <div class="info fixed-width">
+        {{currentInfo}}
+      </div>
+      }
+    </div>
+  </div>
+
+</div>

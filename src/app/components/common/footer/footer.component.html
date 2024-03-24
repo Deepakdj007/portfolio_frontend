@@ -1,0 +1,31 @@
+<div class="footer-container">
+  <div class="contact-me">
+    <div class="text">Contact me</div>
+    <img src="../../../../assets/right-arrow.png" alt="" class="arrow">
+  </div>
+  <div class="links">
+    <a class="link" href="mailto:deepakjosecodes@gmail.com">deepakjosecodes&#64;gmail.com</a>
+    <div class="whatsapp">
+      <div class="logo"></div>
+      <a class="link" href="tel:+91 7012552376">+91 7012552376</a>
+    </div>
+  </div>
+  <div class="small-screen" (click)="toggleLinks($event)">
+    <div class="link-open-button">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <div class="small-screen-links" [@fadeInOut]="linkOpen ? 'open' : 'closed'">
+      <a class="link" href="mailto:deepakjosecodes@gmail.com">mail me</a>
+      <div class="whatsapp">
+        <div class="logo"></div>
+        <a class="link" href="tel:+91 7012552376">whatsapp me</a>
+      </div>
+    </div>
+
+
+  </div>
+  <app-social-buttons></app-social-buttons>
+</div>

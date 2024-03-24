@@ -89,11 +89,39 @@ body {
   padding: 0px 20%;
 }
 .sub-title {
+  margin-bottom: 50px !important;
   font-size: 2.8rem;
   color: white;
   position: relative;
 }
+.links {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.link {
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: white;
 
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: var(--primaryGradient);
+    transition: width 0.35s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
 app-root {
   z-index: 1;
   position: relative;

@@ -83,6 +83,9 @@
         flex-direction: column;
         gap: 10px;
         z-index: 3;
+        &:hover {
+          transform: scale(2);
+        }
         .skill-name-and-image {
           display: flex;
           gap: 10px;
@@ -221,12 +224,19 @@
 @media screen and (max-width: 768px) {
   .skills-container {
     margin-top: 0px;
-    padding-bottom: 8dvh;
     .skills-list {
       gap: 75px;
       .skill {
         width: 120px;
         height: 120px;
+        .skill-detail-container {
+          width: 25vw;
+          &:hover,
+          &:active {
+            transform: scale(1.5) !important;
+            width: 25vw;
+          }
+        }
         .skill-iamge-and-name {
           margin-top: 8px;
           .skill-image {

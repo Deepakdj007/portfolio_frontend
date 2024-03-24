@@ -7,6 +7,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { NgClass } from '@angular/common';
 import { SoftSkillsComponent } from './components/soft-skills/soft-skills.component';
 import { BackToTopButtonComponent } from './components/common/back-to-top-button/back-to-top-button.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { FooterComponent } from './components/common/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,10 +23,23 @@ import { BackToTopButtonComponent } from './components/common/back-to-top-button
     NgClass,
     SoftSkillsComponent,
     BackToTopButtonComponent,
+    AboutMeComponent,
+    FooterComponent,
   ],
 })
 export class AppComponent {
   title = 'portfolio_frontend';
+  showBackToTopButton: boolean = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // Logic to determine if scrolling has started
+    if (window.scrollY > 0) {
+      this.showBackToTopButton = true;
+    } else {
+      this.showBackToTopButton = false;
+    }
+  }
 
   //Function to scroll to top on button click
   scrollToTop() {
