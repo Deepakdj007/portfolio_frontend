@@ -20,14 +20,14 @@ import {
         'open',
         style({
           opacity: 1,
-          bottom: '60px',
+          bottom: '30px',
         })
       ),
       state(
         'closed',
         style({
           opacity: 0,
-          bottom: '40px',
+          bottom: '20px',
         })
       ),
       transition('closed <=> open', animate('500ms ease-in-out')), // Adjust the duration as needed
