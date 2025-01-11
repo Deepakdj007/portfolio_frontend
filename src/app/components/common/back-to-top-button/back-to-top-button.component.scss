@@ -1,0 +1,35 @@
+.back-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  content: "";
+  height: 50px;
+  width: 50px;
+  background: var(--roundGradient);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.2s ease-in-out;
+  @media screen and (max-width: 768px) {
+    height: 30px;
+    width: 30px;
+    bottom: 30px;
+    right: 30px;
+  }
+  &:hover {
+    box-shadow: #13acc77e 1px 3px 12px -1px;
+  }
+  &:active {
+    box-shadow: #17d2f3 1px 3px 18px 2px;
+  }
+  .arrow {
+    height: 12px;
+    width: 20px;
+    @media screen and (max-width: 768px) {
+      height: 6px;
+      width: 10px;
+    }
+  }
+}

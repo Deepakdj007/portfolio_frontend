@@ -1,26 +1,77 @@
 .projects-section {
-  margin-top: 100px;
-  margin-bottom: 30px;
-  .title {
-    font-size: 2.5rem;
-    color: white;
-  }
-  .project-cards {
-    max-height: 40vh;
-    overflow-y: auto;
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5vw;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .project-cards-container {
+    display: flex;
     align-items: center;
+    gap: 15px;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    padding: 20px;
+    background-color: #030a184d;
+    border-radius: 30px;
+    margin-top: 50px;
+    .scroll {
+      padding: 15px;
+      display: flex;
+      border-radius: 50%;
+      background-color: #00000082;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+      min-width: 20px;
+      height: 20px;
+      .scroll-img {
+        width: 20px;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    .left-scroll {
+      position: absolute;
+      left: -1.5rem;
+      z-index: 5;
+      &:active {
+        transform: translateX(-6px);
+      }
+    }
+    .right-scroll {
+      position: absolute;
+      right: -1.5rem;
+
+      z-index: 5;
+      &:active {
+        transform: translateX(6px) !important;
+      }
+    }
+
+    .project-cards {
+      overflow-x: auto;
+      justify-content: flex-start;
+      display: flex;
+      gap: 2vw;
+      align-items: center;
+      padding: 10px;
+      transition: transform 0.5s ease;
+    }
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   .projects-section {
-    .project-cards {
-      grid-template-columns: 1fr;
+    .project-cards-container {
+      gap: 5px;
+      padding: 20px;
+      margin-top: 30px;
+      .scroll {
+        padding: 5px;
+        display: flex;
+        background-color: #0b111c;
+        justify-content: center;
+
+        .scroll-img {
+          width: 8px;
+        }
+      }
     }
   }
 }

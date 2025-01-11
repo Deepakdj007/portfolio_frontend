@@ -1,0 +1,36 @@
+<div class="skills-container">
+  <div class="sub-title">Skills</div>
+  <div class="skills-list">
+    @for (skill of skills; track $index) {
+    <div class="skill" [id]="'skill-'+skill.id">
+      <div class="outer">
+        <div class="counter" [id]="skill.name">{{skill.progress *10}}</div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <linearGradient id="GradientColor">
+            <stop offset="0%" stop-color="#13adc7" />
+            <stop offset="66.67%" stop-color="#6978d1" />
+            <stop offset="100%" stop-color="#945dd6" />
+          </linearGradient>
+        </defs>
+        <circle [id]="skill.name" stroke-linecap="round" />
+      </svg>
+      <div class="skill-iamge-and-name">
+        <div class="skill-image">
+          <img [src]="skill.image" alt="">
+        </div>
+        <div class="skill-name">{{skill.name}}</div>
+      </div>
+      <!-- Skill Deatils -->
+      <div #skillDetail class="skill-detail-container" [id]="'skill-detail-'+skill.id">
+        <div class="skill-name-and-image">
+          <h3 class="skill-name">{{skill.name}}</h3>
+          <img [src]="skill.image" alt="" class="skill-image">
+        </div>
+        <p class="skill-description">{{skill.description}}</p>
+      </div>
+    </div>
+    }
+  </div>
+</div>

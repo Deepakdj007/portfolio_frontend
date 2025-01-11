@@ -9,32 +9,32 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-nav-bar',
+  selector: 'app-footer',
   standalone: true,
-  templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss',
   imports: [SocialButtonsComponent],
+  templateUrl: './footer.component.html',
+  styleUrl: './footer.component.scss',
   animations: [
     trigger('fadeInOut', [
       state(
         'open',
         style({
           opacity: 1,
-          top: '60px',
+          bottom: '40px',
         })
       ),
       state(
         'closed',
         style({
           opacity: 0,
-          top: '40px',
+          bottom: '20px',
         })
       ),
       transition('closed <=> open', animate('500ms ease-in-out')), // Adjust the duration as needed
     ]),
   ],
 })
-export class NavBarComponent {
+export class FooterComponent {
   linkOpen: boolean = false;
 
   toggleLinks(event: any) {

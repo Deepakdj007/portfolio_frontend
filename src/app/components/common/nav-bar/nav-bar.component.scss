@@ -5,7 +5,7 @@
   position: sticky;
   z-index: 2;
   align-items: center;
-  height: 137px;
+  height: 15dvh;
 
   h1,
   a {
@@ -76,52 +76,27 @@
     display: flex;
     justify-content: flex-end;
   }
-  .links {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    gap: 10%;
 
-    .link {
-      font-size: 1.5rem;
-      cursor: pointer;
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        width: 0%;
-        height: 2px;
-        background: var(--primaryGradient);
-        transition: width 0.35s ease;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
-    }
-  }
   .small-screen {
     display: none;
     position: relative;
     width: 30%;
     justify-content: center;
-    height: 30px;
+    height: 50px;
     align-items: center;
     .small-screen-links {
       position: absolute;
+      top: 40px;
       box-shadow: #945dd6 0px 0px 6px 0px;
-      width: 180px;
-      height: 45px;
+      width: 200px;
+      height: 35px;
       align-items: center;
       justify-content: center;
       display: flex;
       border: 1px solid #6978d1;
       border-radius: 25px;
       padding: 0px 15px;
-      gap: 20px;
+      gap: 35px;
     }
     .link-open-button {
       display: flex;
@@ -175,7 +150,7 @@
     }
     .app-name-container {
       .app-name {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -184,7 +159,7 @@
   .nav-bar {
     .app-name-container {
       .app-name {
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
     }
 

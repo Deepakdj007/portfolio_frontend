@@ -1,0 +1,104 @@
+.about-me-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 65px;
+  .contents {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .fixed-width {
+      width: 25%;
+    }
+    .dates-container {
+      display: flex;
+      .date {
+        font-size: 1.6rem;
+        color: white;
+        font-weight: 500;
+      }
+    }
+    .line-and-balls {
+      margin-top: 20px;
+      display: flex;
+      .line {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        content: "";
+        height: 0.5rem;
+        background-color: white;
+        border-radius: 3px;
+        .ball {
+          margin-inline-start: -2px;
+          content: "";
+          width: 2rem;
+          height: 2rem;
+          background: var(--roundGradient);
+          border-radius: 50%;
+          box-shadow: rgba(19, 172, 199, 0.7254901961) 1px 3px 12px -1px;
+        }
+      }
+    }
+    .info-container {
+      margin-top: 20px;
+      display: flex;
+      .info {
+        font-size: 1.2rem;
+        color: #929eb0;
+        padding: 15px;
+        @media screen and (max-width: 768px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-me-container {
+    .contents {
+      flex-direction: row;
+      height: 100%;
+      .fixed-width {
+        height: 25%;
+        width: unset;
+      }
+      .dates-container {
+        height: 100%;
+        flex-direction: column;
+      }
+      .line-and-balls {
+        flex-direction: column;
+        margin-top: 0px;
+        margin-inline-start: 20px;
+        .line-and-ball {
+          height: 25%;
+          width: unset;
+          .line {
+            width: 0.5rem;
+            height: 100%;
+            position: relative;
+            .ball {
+              position: absolute;
+              margin-inline-start: -7px;
+              top: -2px;
+            }
+          }
+        }
+      }
+      .info-container {
+        margin-top: 0px;
+        margin-inline-start: 20px;
+        flex-direction: column;
+        .info {
+          height: 25%;
+          width: 75%;
+        }
+      }
+    }
+  }
+}

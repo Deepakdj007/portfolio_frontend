@@ -1,3 +1,11 @@
 <app-nav-bar></app-nav-bar>
 <app-bio></app-bio>
 <app-projects></app-projects>
+<app-skills></app-skills>
+<app-soft-skills></app-soft-skills>
+<app-about-me></app-about-me>
+<app-footer></app-footer>
+
+@if (showBackToTopButton) {
+<app-back-to-top-button (click)="scrollToTop()"></app-back-to-top-button>
+}
