@@ -1,3 +1,5 @@
-<div class="back-to-top">
-  <img src="../../../../assets/top-arrow.png" alt="" class="arrow">
-</div>
+@if (showBackToTopButton) {
+  <div class="back-to-top" (click)="scrollToTop()">
+    <img src="../../../../assets/top-arrow.png" alt="" class="arrow">
+  </div>
+}

@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './components/common/nav-bar/nav-bar.component';
 import { BioComponent } from './components/bio/bio.component';
@@ -29,24 +29,5 @@ import { FooterComponent } from './components/common/footer/footer.component';
 })
 export class AppComponent {
   title = 'portfolio_frontend';
-  showBackToTopButton: boolean = false;
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    // Logic to determine if scrolling has started
-    if (window.scrollY > 0) {
-      this.showBackToTopButton = true;
-    } else {
-      this.showBackToTopButton = false;
-    }
-  }
-
-  //Function to scroll to top on button click
-  scrollToTop() {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
-  }
 }
