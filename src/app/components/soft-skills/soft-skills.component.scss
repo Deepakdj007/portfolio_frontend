@@ -30,8 +30,13 @@
       }
       .skill-name {
         font-size: 1.6rem;
-        color: white;
+
         font-weight: 500;
+        color: #929eb0;
+        transition: all 0.15s;
+        &:hover{
+          color: white;
+        }
       }
     }
   }
