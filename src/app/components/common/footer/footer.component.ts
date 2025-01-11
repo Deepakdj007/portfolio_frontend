@@ -20,7 +20,7 @@ import {
         'open',
         style({
           opacity: 1,
-          bottom: '30px',
+          bottom: '40px',
         })
       ),
       state(

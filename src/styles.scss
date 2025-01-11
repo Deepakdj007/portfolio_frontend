@@ -135,6 +135,7 @@ app-root {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .circles li {
@@ -242,8 +243,8 @@ app-root {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   transition: all 0.15s;
 }
 
