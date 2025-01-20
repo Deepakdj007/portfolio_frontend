@@ -365,7 +365,7 @@
     }
     .picture-container-cover {
       width: 350px;
-      height: 350px;
+      min-height: 350px !important;
       justify-content: center;
       .picture-container {
         .ellipse-border-only {
