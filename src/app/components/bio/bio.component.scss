@@ -120,6 +120,10 @@
       display: flex;
       justify-content: center;
       .ellipse-border-only {
+        @media screen and (max-width:768px) {
+          width: 240px !important;
+          height: 240px !important;
+        }
         box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
         transition: box-shadow 2s ease-in-out; /* Add transition property */
         width: 88%;
@@ -176,7 +180,6 @@
           transition: 0.6s;
           transition-delay: calc(0.1s * var(--i));
           transform: rotate(0deg) translateX(250px);
-
           img {
             height: 75%;
             display: flex;
@@ -371,10 +374,10 @@
         .ellipse-border-only {
           .skills-logos {
             .large-skills {
-              left: -57px;
-              top: 98px;
+              left: -55px;
+              top: 100px;
               transform: translateX(188px);
-              transform-origin: 170px;
+              transform-origin: 175px;
               width: 40px;
               height: 40px;
             }

@@ -4,6 +4,9 @@
   justify-content: center;
   padding-bottom: 65px;
   margin-top: 15vh;
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
   .contents {
     margin-top: 50px;
     display: flex;
@@ -63,6 +66,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .date.fixed-width {
+    position: relative;
+    bottom: 3px;
+}
   .about-me-container {
     .contents {
       flex-direction: row;
@@ -72,7 +79,6 @@
         width: unset;
       }
       .dates-container {
-        height: 100%;
         flex-direction: column;
       }
       .line-and-balls {
